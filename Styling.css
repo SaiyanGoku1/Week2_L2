@@ -1,0 +1,327 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: poppins;
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+  background-color: #f4ece4; /* Unified background color for the entire page */
+  color: #333; /* Default text color */
+  width: 100%;
+  height: 100%; /* Ensure the body and html take full height */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  padding: 1rem 2rem;
+  background-color: transparent; /* Make the header's background transparent */
+  box-shadow: none; /* Remove shadow for a seamless look */
+  position: sticky; /* Sticks to the top */
+  top: 0;
+  z-index: 1000;
+  font-size: 24px;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+header nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #007BFF; /* Highlighted color on hover */
+}
+
+header .cta {
+  padding: 0.5rem 1rem;
+  background-color: #080808;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+header .cta:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.right-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+/* Carousel Section */
+.carousel-section {
+  overflow: hidden;
+  position: relative;
+  margin-top: 1rem;
+  background-color: #f4ece4; /* Unified background */
+  height: 80vh; /* Ensure carousel section takes the full viewport height */
+  min-width: fit-content;
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid red; */
+}
+
+.product-header {
+  display: flex;
+  width: 100%; /* Ensure the list takes full width */
+  height: 80vh;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each slide in the carousel */
+.splide__slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid red; */
+}
+
+.product-info {
+  max-width: 60%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: -200px;
+}
+
+.product-title {
+  color: white;
+}
+
+span {
+  color: white;
+}
+
+/* Image adjustments within the slide */
+.product-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 2rem 0;
+  transition: transform 0.3s ease-in-out;
+  /* border: 2px solid red; */
+}
+
+.product-info h1 {
+  margin: 0;
+  font-size: 76px;
+  font-weight: 900;
+  line-height: 104.12px;
+}
+
+.product-info h3 {
+  font-size: 52px;
+  font-weight: 900;
+  color:black;
+  margin: 0.5rem 0;
+  font-weight: bolder;
+  line-height: 60.06px;
+}
+
+.product-info p {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: left;
+  line-height: 45.6px;
+  width: 400px;
+}
+
+.product-price {
+  color: white;
+  font-size: 70px;
+  font-weight: 700;
+  font-weight: bolder;
+  line-height: 95.9px;
+}
+
+.footer-image img{
+  width: auto;
+  height: 5vh;
+  background-size: cover;
+  background-position: center;
+}
+.price {
+  margin: 1rem 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.splide__arrow {
+  background-color: transparent;
+  border: 2px solid white;
+  font-size: 20px;
+}
+
+.splide__arrow--prev {
+  top: 60%;
+  left: 58%;
+  position: absolute;
+  z-index: 2;
+}
+.splide__arrow--next {
+  top: 60%;
+  right: 2%;
+  position: absolute;
+  z-index: 2;
+}
+
+
+/* Buttons for Carousel */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button-group button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-group button:hover {
+  background-color: #007BFF;
+  color: #fff;
+  border: 1px solid #007BFF;
+}
+
+
+@media (max-width: 480px) {
+  /* Header */
+  header {
+    flex-direction: column;
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  header .logo {
+    font-size: 1.2rem;
+  }
+
+  header nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  header nav a {
+    margin: 0.3rem;
+    font-size: 0.9rem;
+  }
+
+  header .cta {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  /* Product Info */
+  .product-info {
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+    padding: 0.5rem;
+    width:300px;
+  }
+
+  .product-info h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .product-info h3 {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  .product-info p {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    width: auto;
+  }
+
+  .product-price {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  /* Product Image */
+  .product-image {
+    max-width: 90%;
+    height: auto;
+    margin: 1rem 0;
+    margin-bottom: 170px;
+    margin-left: 20px;
+  }
+
+  /* Footer Image */
+  .footer-image img {
+    height: 4vh;
+    margin-top: 2rem;
+  }
+
+  /* Buttons */
+  .button-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .button-group button {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  /* Splide Arrows */
+  .splide__arrow {
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .splide__arrow--prev {
+    top: 50%;
+    left: 48%;
+  }
+
+  .splide__arrow--next {
+    top: 50%;
+    right: 3%;
+  }
+}
